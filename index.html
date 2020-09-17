@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <title>
+            Advanced Calculator
+        </title>
+
+        <script type="text/javascript">
+            /*code: 48-57 Numbers*/
+            function restrictAlphabets(e) {
+                var x = e.which || e.keycode;
+                if ((x >= 48 && x <= 57))
+                    return true;
+                else
+                    return false;
+            }
+
+            /*calculator display*/
+            var text = 
+'{ "sin":0 , "cos":0, "tan" : 0 }'
+           var obj = JSON.parse(lobal)
+           let global;
+            function display(x)
+            {
+                if(x === 'C'){
+                    document.getElementById("calc_1").value= " "
+                }
+                else{
+                    document.getElementById("calc_1").value+=x
+                }
+                console.log(obj[x])
+             }
+
+             /*Equation solver*/
+            function solve()
+            {
+                let parse = document.getElementById("calc_1").value
+                if(parse[0] == '√'){
+                    let parse_1 = parse.substring(1,parse.length)
+                    document.getElementById("calc_1").value = Math.sqrt(parse_1)
+                }
+                else if(parse[1] == '√'){
+                    let parse_1 = parse.substring(2,parse.length)
+                    document.getElementById("calc_1").value = Math.sqrt(parse_1)
+                }
+                else{  
+                    var i = 0
+                    let new_parse = ""
+                    for( i = 0; i < parse.length; i++){
+                        if(parse[i] == '÷'){
+                          new_parse =   new_parse.concat('/')
+                        }
+                        else if(parse[i] == '×'){
+                            new_parse =   new_parse.concat('*')
+                        }
+                        else{
+                            new_parse = new_parse.concat(parse[i])
+                        }
+                    }
+                    let y = eval(new_parse)
+                    document.getElementById("calc_1").value = y
+                }
+            }
+         </script>
+
+        <style>
+
+body {
+    background:linear-gradient(45deg, #4764e9c2, #1caf95e3); ;
+}
+
+
+
+.button {
+    width: 50;
+    height: 50;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    background: #332c2c00;
+    font-weight: 500;
+    border: 0.1px;
+    outline: none;
+    color: lightskyblue;
+
+}
+.display {
+    
+    height: 80;
+    font-size: 25px;
+    border: 1.0px solid #35343400;
+    background: #00000085;
+    text-align: right;
+    outline: none;
+    width: 390;
+    color: gray;
+
+}
+
+.display::placeholder {
+    color: transparent;
+}
+.display:hover {
+    color: grey;
+    background: rgba(14, 13, 13, 0.267);
+    transition: 0.5s;
+}
+
+.display:hover::placeholder {
+    color: gray;
+    transition: 0.5s;
+
+}
+.calc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    background: #070532;
+    width: 390;
+    box-sizing: border-box;
+}
+.button:active {
+    background: black;
+}
+
+
+p.heading {
+    color: rgb(0 0 0 / 28%);
+    position: absolute;
+    top: -20%;
+    left: 1%;
+    font-size: 30px;
+    font-family: sans-serif;
+    width: 394;
+    font-weight: 600;
+    text-transform: uppercase;
+
+
+}
+
+p.heading:hover {
+    color:rgb(0, 0, 0) ;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: rgba(13, 22, 63, 0.705) ;
+    transition: 0.1s;
+    color: rgb(120, 221, 174);
+}
+
+
+
+
+
+       
+        </style>
+        
+    </head>
+    <link rel="stylesheet" href="" type="text/css">
+    <body>
+        
+    <div class="calc">
+        <p class="heading">Advanced Calculator</p>
+        <table>
+            <tr>
+                <input type="text" name="text" class="display" placeholder="%*+-" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
+            </tr>
+            <br>
+            <tr>
+                <td><input type="button" name="button" class="button" value="C" onclick="display('C')"></td>
+                <td><input type="button" name="button" class="button" value="%" onclick="display('%')"></td>
+                <td><input type="button" name="button" class="button" value="√" onclick="display('√')"></td>
+                <td><input type="button" name="button" class="button" value="<<" onclick="display('<<')"></td>
+                <td><input type="button" name="button" class="button" value="sin" onclick="display('sin')"></td>
+                <td><input type="button" name="button" class="button" value="cos" onclick="display('cos')"></td>
+                <td><input type="button" name="button" class="button" value="tan" onclick="display('tan')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="button" class="button" value="1" onclick="display('1')"></td>
+                <td><input type="button" name="button" class="button" value="2" onclick="display('2')"></td>
+                <td><input type="button" name="button" class="button" value="3" onclick="display('3')"></td>
+                <td><input type="button" name="button" class="button" value="+" onclick="display('+')"></td>
+                <td><input type="button" name="button" class="button" value="sin-1" onclick="display('sin-1')" style="font-size: 18px;"></td>
+                <td><input type="button" name="button" class="button" value="cos-1" onclick="display('cos-1')" style="font-size: 18px;"></td>
+                <td><input type="button" name="button" class="button" value="tan-1" onclick="display('tan-1')" style="font-size: 18px;"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="button" class="button" value="4" onclick="display('4')"></td>
+                <td><input type="button" name="button" class="button" value="5" onclick="display('5')"></td>
+                <td><input type="button" name="button" class="button" value="6" onclick="display('6')"></td>
+                <td><input type="button" name="button" class="button" value="-" onclick="display('-')"></td>
+                <td><input type="button" name="button" class="button" value="log" onclick="display('log')"style="font-size: 18px;" ></td>
+                <td><input type="button" name="button" class="button" value="exp()"onclick="display('exp()')"style="font-size: 18px;"></td>
+                <td><input type="button" name="button" class="button" value="cube" onclick="display('cube')"style="font-size: 18px;" ></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="button" class="button" value="7" onclick="display('7')"></td>
+                <td><input type="button" name="button" class="button" value="8" onclick="display('8')"></td>
+                <td><input type="button" name="button" class="button" value="9" onclick="display('9')"></td>
+                <td><input type="button" name="button" class="button" value="×" onclick="display('×')"></td>
+                <td><input type="button" name="button" class="button" value="3√" onclick="display('3√')"></td>
+                <td colspan="2" rowspan="2"><input type="button" name="button" class="button" value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42; background-color: rgba(0, 0, 0, 0.267);"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="button" class="button" value="0" onclick="display('0')"></td>
+                <td><input type="button" name="button" class="button" value="." onclick="display('.')"></td>
+                <td><input type="button" name="button" class="button" value="π" onclick="display('π')"></td>
+                <td><input type="button" name="button" class="button" value="÷" onclick="display('÷')"></td>
+                <td><input type="button" name="button" class="button" value="()"onclick="display('()')"></td>
+            </tr>
+            
+            
+        
+
+        </table>
+    </div>  
+    </body>
+</html>
