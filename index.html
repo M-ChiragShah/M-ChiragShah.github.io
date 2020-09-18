@@ -61,6 +61,11 @@
                 }
             }
          </script>
+         <script>
+             function sinclick() {
+                 text.value=Math.sin(text.value)
+             }
+         </script>
 
         <style>
 
@@ -172,7 +177,7 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="%" onclick="display('%')"></td>
                 <td><input type="button" name="button" class="button" value="√" onclick="display('√')"></td>
                 <td><input type="button" name="button" class="button" value="<<" onclick="display('<<')"></td>
-                <td><input type="button" name="button" class="button" value="sin" onclick="display('sin')"></td>
+                <td><input type="button" name="button" class="button" value="sin" onclick="sinclick"></td>
                 <td><input type="button" name="button" class="button" value="cos" onclick="display('cos')"></td>
                 <td><input type="button" name="button" class="button" value="tan" onclick="display('tan')"></td>
             </tr>
