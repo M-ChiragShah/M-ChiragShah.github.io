@@ -63,9 +63,25 @@
             }
          </script>
          <script>
-             function sinclick() {
-                 text.value=Math.sin(text.value)
-             }
+            function sin(form)
+            {
+                form.calc_1.value = Math.sin(form.calc_1.value);
+            }
+
+            function cos(form)
+            {
+                form.calc_1.value = Math.cos(form.calc_1.value);
+            }
+
+            function tan(form)
+            {
+                form.calc_1.value = Math.tan(form.calc_1.value);
+            }
+
+
+
+
+
          </script>
 
         <style>
@@ -166,7 +182,7 @@ p.heading:hover {
     </head>
     <link rel="stylesheet" href="" type="text/css">
     <body>
-        
+    <form>
     <div class="calc">
         <p class="heading">Advanced Calculator</p>
         <table>
@@ -179,9 +195,9 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="%" onclick="display('%')"></td>
                 <td><input type="button" name="button" class="button" value="√" onclick="display('√')"></td>
                 <td><input type="button" name="button" class="button" value="<<" onclick="display('<<')"></td>
-                <td><input type="button" name="button" class="button" value="sin" onclick="sinclick"></td>
-                <td><input type="button" name="button" class="button" value="cos" onclick="display('cos')"></td>
-                <td><input type="button" name="button" class="button" value="tan" onclick="display('tan')"></td>
+                <td><input type="button" name="button" class="button" value="sin" onclick="{ sin(this.form) }"></td>
+                <td><input type="button" name="button" class="button" value="cos" onclick="{ cos(this.form) }"></td>
+                <td><input type="button" name="button" class="button" value="tan" onclick="{ tan(this.form) }"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="1" onclick="display('1')"></td>
@@ -212,7 +228,7 @@ p.heading:hover {
             <tr>
                 <td><input type="button" name="button" class="button" value="0" onclick="display('0')"></td>
                 <td><input type="button" name="button" class="button" value="." onclick="display('.')"></td>
-                <td><input type="button" name="button" class="button" value="π" onclick="display('π')"></td>
+                <td><input type="button" name="button" class="button" value="π" onclick="display('3.141592')"></td>
                 <td><input type="button" name="button" class="button" value="÷" onclick="display('÷')"></td>
                 <td><input type="button" name="button" class="button" value="()"onclick="display('()')"></td>
             </tr>
@@ -221,6 +237,7 @@ p.heading:hover {
         
 
         </table>
-    </div>  
+    </div>
+    </form>  
     </body>
 </html>
