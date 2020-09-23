@@ -98,7 +98,8 @@
 
 
 body {
-    background:linear-gradient(45deg, #4764e9c2, #1caf95e3); ;
+    background:linear-gradient(45deg, #4764e9c2, #1caf95e3);
+    /*animation: linear 10s body infinite;*/
 }
 
 
@@ -114,6 +115,7 @@ body {
     border: 0.1px;
     outline: none;
     color: lightskyblue;
+    box-shadow: 4px 5px 7px 0px black;
 
 }
 .display {
@@ -127,6 +129,7 @@ body {
     width: 390;
     color: gray;
     font-family: Helvetica, sans-serif;
+    border-radius: 10px;
 
 }
 
@@ -152,10 +155,11 @@ body {
     background: #070532;
     width: 390;
     box-sizing: border-box;
+    box-shadow: 0px 20px 20px black;
+    border-radius: 10px;
+    
 }
-.button:active {
-    background: black;
-}
+
 
 
 p.heading {
@@ -176,10 +180,22 @@ p.heading:hover {
 }
 
 .button:hover {
-    background-color: rgba(13, 22, 63, 0.705) ;
+    background-color: rgba(3, 6, 15, 0.705) ;
     transition: 0.1s;
     color: rgb(120, 221, 174);
 }
+
+/*@keyframes body {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}*/
 
 
 
@@ -204,9 +220,9 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="%" onclick="display('%')"></td>
                 <td><input type="button" name="button" class="button" value="√" onclick="display('√')"></td>
                 <td><input type="button" name="button" class="button" value="<<" onclick="display('<<')"></td>
-                <td><input type="button" name="button" class="button" value="sin" onclick="{ sin(this.form) }"></td>
-                <td><input type="button" name="button" class="button" value="cos" onclick="{ cos(this.form) }"></td>
-                <td><input type="button" name="button" class="button" value="tan" onclick="{ tan(this.form) }"></td>
+                <td><input type="button" name="button" class="button" value="sin" onclick="{ sin(this.form) }" style="font-size: 18px;" ></td>
+                <td><input type="button" name="button" class="button" value="cos" onclick="{ cos(this.form) }" style="font-size: 18px;"></td>
+                <td><input type="button" name="button" class="button" value="tan" onclick="{ tan(this.form) }" style="font-size: 18px;"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="1" onclick="display('1')"></td>
