@@ -8,6 +8,7 @@
 
         <script type="text/javascript">
 
+            //Don't know if this works
             document.addEventListener('touchmove', function (event) {
                 if (event.scale !== 1) { event.preventDefault(); }
                 }, false);
@@ -27,7 +28,6 @@
                 else
                     return false;
             }
-
             /*calculator display*/
             var text = 
 '{ "sin":0 , "cos":0, "tan" : 0 }'
@@ -38,10 +38,14 @@
                 if(x === 'C'){
                     document.getElementById("calc_1").value= " "
                 }
+                else if( x === '<<'){
+                    val =  document.getElementById("calc_1").value
+                    val_length = val.length
+                    document.getElementById("calc_1").value = val.substring(0,val_length - 1)
+                }
                 else{
                     document.getElementById("calc_1").value+=x
                 }
-                console.log(obj[x])
              }
 
              /*Equation solver*/
@@ -207,17 +211,6 @@ p.heading:hover {
     color: rgb(120, 221, 174);
 }
 
-/*@keyframes body {
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0 50%;
-    }
-}*/
 
 @viewport {
     width: device-width ;
@@ -249,34 +242,34 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="%" onclick="display('%')"></td>
                 <td><input type="button" name="button" class="button" value="√" onclick="display('√')"></td>
                 <td><input type="button" name="button" class="button" value="<<" onclick="display('<<')"></td>
-                <td><input type="button" name="button" class="button" value="sin" onclick="{ sin(this.form) }" style="font-size: 16px;" ></td>
-                <td><input type="button" name="button" class="button" value="cos" onclick="{ cos(this.form) }" style="font-size: 16px;"></td>
-                <td><input type="button" name="button" class="button" value="tan" onclick="{ tan(this.form) }" style="font-size: 16px;"></td>
+                <td><input type="button" name="button" class="button" value="sin" onclick="{ sin(this.form) }" style="font-size: 18px;" ></td>
+                <td><input type="button" name="button" class="button" value="cos" onclick="{ cos(this.form) }" style="font-size: 18px;"></td>
+                <td><input type="button" name="button" class="button" value="tan" onclick="{ tan(this.form) }" style="font-size: 18px;"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="1" onclick="display('1')"></td>
                 <td><input type="button" name="button" class="button" value="2" onclick="display('2')"></td>
                 <td><input type="button" name="button" class="button" value="3" onclick="display('3')"></td>
                 <td><input type="button" name="button" class="button" value="+" onclick="display('+')"></td>
-                <td><input type="button" name="button" class="button" value="sin⁻¹ " onclick="display('sin-1')" style="font-size: 18px; text-align: left; -webkit-appearance: none;"></td>
-                <td><input type="button" name="button" class="button" value="cos-1" onclick="display('cos-1')" style="font-size: 16px; text-align: left; -webkit-appearance: none;"></td>
-                <td><input type="button" name="button" class="button" value="tan-1" onclick="display('tan-1')" style="font-size: 16px; text-align: left; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="sin⁻¹ " onclick="display('sin⁻¹')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="cos⁻¹" onclick="display('cos⁻¹')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="tan⁻¹" onclick="display('tan⁻¹')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="4" onclick="display('4')"></td>
                 <td><input type="button" name="button" class="button" value="5" onclick="display('5')"></td>
                 <td><input type="button" name="button" class="button" value="6" onclick="display('6')"></td>
                 <td><input type="button" name="button" class="button" value="-" onclick="display('-')"></td>
-                <td><input type="button" name="button" class="button" value="log" onclick="{ log(this.form) }"style="font-size: 16px; -webkit-appearance: none;" ></td>
-                <td><input type="button" name="button" class="button" value="exp()"onclick="display('exp()')"style="font-size: 16px; -webkit-appearance: none;"></td>
-                <td><input type="button" name="button" class="button" value="cube" onclick="display('cube')"style="font-size: 16px; -webkit-appearance: none;" ></td>
+                <td><input type="button" name="button" class="button" value="log" onclick="{ log(this.form) }"style="font-size: 18px; -webkit-appearance: none;" ></td>
+                <td><input type="button" name="button" class="button" value="exp"onclick="display('exp()')"style="font-size: 18px; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="x³" onclick="display('x³')"style="font-size: 18px; -webkit-appearance: none;" ></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="7" onclick="display('7')"></td>
                 <td><input type="button" name="button" class="button" value="8" onclick="display('8')"></td>
                 <td><input type="button" name="button" class="button" value="9" onclick="display('9')"></td>
                 <td><input type="button" name="button" class="button" value="×" onclick="display('×')"></td>
-                <td><input type="button" name="button" class="button" value="3√" onclick="display('3√')"></td>
+                <td><input type="button" name="button" class="button" value="³√" onclick="display('³√')"></td>
                 <td colspan="2" rowspan="2"><input type="button" name="button" class="button" value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00;"></td>
             </tr>
             <tr>
