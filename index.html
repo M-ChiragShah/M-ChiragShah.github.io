@@ -1,9 +1,10 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.8. user-scalable=no" />
         <title>
             Advanced Calculator
         </title>
-        <meta name="viewport" content="user-scalable=no, initial-scale=0.8, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
 
         <script type="text/javascript">
             /*code: 48-57 Numbers*/
@@ -122,6 +123,7 @@ body {
     outline: none;
     color: lightskyblue;
     box-shadow: 4px 5px 7px 0px black;
+    
 
 }
 .display {
@@ -169,7 +171,7 @@ body {
 
 
 p.heading {
-    color: rgb(0 0 0 / 28%);
+    color: rgba(5, 2, 2, 0.404);
     position: absolute;
     text-align: center;
     transform: translateY(-80px)translateX(8px);
@@ -177,6 +179,7 @@ p.heading {
     font-family:Poppins,sans-serif;
     font-weight: 600;
     text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
 
 }
 
@@ -242,18 +245,18 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="2" onclick="display('2')"></td>
                 <td><input type="button" name="button" class="button" value="3" onclick="display('3')"></td>
                 <td><input type="button" name="button" class="button" value="+" onclick="display('+')"></td>
-                <td><input type="button" name="button" class="button" value="sin-1" onclick="display('sin-1')" style="font-size: 18px; text-align: center;"></td>
-                <td><input type="button" name="button" class="button" value="cos-1" onclick="display('cos-1')" style="font-size: 18px; text-align: center;"></td>
-                <td><input type="button" name="button" class="button" value="tan-1" onclick="display('tan-1')" style="font-size: 18px; text-align: center;"></td>
+                <td><input type="button" name="button" class="button" value="sin-1" onclick="display('sin-1')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="cos-1" onclick="display('cos-1')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="tan-1" onclick="display('tan-1')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="4" onclick="display('4')"></td>
                 <td><input type="button" name="button" class="button" value="5" onclick="display('5')"></td>
                 <td><input type="button" name="button" class="button" value="6" onclick="display('6')"></td>
                 <td><input type="button" name="button" class="button" value="-" onclick="display('-')"></td>
-                <td><input type="button" name="button" class="button" value="log" onclick="{ log(this.form) }"style="font-size: 18px;" ></td>
-                <td><input type="button" name="button" class="button" value="exp()"onclick="display('exp()')"style="font-size: 18px;"></td>
-                <td><input type="button" name="button" class="button" value="cube" onclick="display('cube')"style="font-size: 18px;" ></td>
+                <td><input type="button" name="button" class="button" value="log" onclick="{ log(this.form) }"style="font-size: 18px; -webkit-appearance: none;" ></td>
+                <td><input type="button" name="button" class="button" value="exp()"onclick="display('exp()')"style="font-size: 18px; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="cube" onclick="display('cube')"style="font-size: 18px; -webkit-appearance: none;" ></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="7" onclick="display('7')"></td>
