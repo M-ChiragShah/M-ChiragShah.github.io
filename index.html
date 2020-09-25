@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, initial-scale= 1.0," />
+        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, initial-scale= 0.9," />
         <title>
             Advanced Calculator
         </title>
@@ -188,33 +188,41 @@ body {
 
 
 p.heading {
-    color: rgba(5, 2, 2, 0.404);
+    
     position: absolute;
     text-align: center;
-    transform: translateY(-80px)translateX(8px);
+    transform: translateY(-80px)translateX(52.5px);
     font-size: 30px;
     font-family:Poppins,sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    letter-spacing: 10px;
+    background: -webkit-linear-gradient(120deg, #4764e9c2, #1caf95e3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 
 p.heading:hover {
-    color:rgb(0, 0, 0) ;
-    transition: 0.5s;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    background: -webkit-linear-gradient(120deg, #1caf95e3, #4764e9c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: 3s;
 }
 
 .button:hover {
     background-color: rgba(3, 6, 15, 0.705) ;
     transition: 0.1s;
     color: rgb(120, 221, 174);
+
 }
 
 
 @viewport {
     width: device-width ;
-    zoom: 0.8 ;
 }
 
 @media only screen and (max-width: 480px){
@@ -243,6 +251,12 @@ p.heading:hover {
 
     
 }*/
+ body:hover{
+    background: linear-gradient(45deg, #131c4af7, #0f5045);
+    transition: 2s;
+    color: gray;
+}
+
 
 
 
@@ -256,8 +270,9 @@ p.heading:hover {
     <link rel="stylesheet" href="" type="text/css">
     <body>
     <form>
+        <div id="overlay"></div>
     <div class="calc">
-        <p class="heading">Advanced Calculator</p>
+        <p class="heading">Calculator</p>
         <table style="margin-left: 3;">
             <tr>
                 <input type="text" name="text" class="display" placeholder="%*+-" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
@@ -277,9 +292,9 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="2" onclick="display('2')"></td>
                 <td><input type="button" name="button" class="button" value="3" onclick="display('3')"></td>
                 <td><input type="button" name="button" class="button" value="+" onclick="display('+')"></td>
-                <td><input type="button" name="button" class="button" value="sin⁻¹ " onclick="display('sin⁻¹')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
-                <td><input type="button" name="button" class="button" value="cos⁻¹" onclick="display('cos⁻¹')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
-                <td><input type="button" name="button" class="button" value="tan⁻¹" onclick="display('tan⁻¹')" style="font-size: 18px; text-align: center; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="sin⁻¹ " onclick="display('sin⁻¹')" style="font-size: 18px; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="cos⁻¹" onclick="display('cos⁻¹')" style="font-size: 18px;  -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value="tan⁻¹" onclick="display('tan⁻¹')" style="font-size: 18px;  -webkit-appearance: none;"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="4" onclick="display('4')"></td>
@@ -296,11 +311,7 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="9" onclick="display('9')"></td>
                 <td><input type="button" name="button" class="button" value="×" onclick="display('×')"></td>
                 <td><input type="button" name="button" class="button" value="³√" onclick="display('³√')"></td>
-                <td colspan="2" rowspan="2"><input type="button" name="button" class="button" value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00; @media screen and (max-width: 370px){
-                    height: 50;
-                    width: 50;
-                    
-                }"></td>
+                <td colspan="2" rowspan="2"><input type="button" name="button" class="button" value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00;"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="0" onclick="display('0')"></td>
