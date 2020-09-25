@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.8," />
+        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, initial-scale= 1.0," />
         <title>
             Advanced Calculator
         </title>
@@ -217,6 +217,32 @@ p.heading:hover {
     zoom: 0.8 ;
 }
 
+@media only screen and (max-width: 480px){
+    
+    .calc{
+         width: 390px;
+     }
+}
+
+/* @media screen and (max-width: 370px){
+    .calc{
+        width: 90%;
+    }
+    .display{
+        width: 100%;
+    }
+    .heading{
+        font-size: 5px;
+        width: 100%;
+        top: -20%;
+        line-height: 1.1;
+    }
+    .button{
+        width: 100%;
+    }
+
+    
+}*/
 
 
 
@@ -261,8 +287,8 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="6" onclick="display('6')"></td>
                 <td><input type="button" name="button" class="button" value="-" onclick="display('-')"></td>
                 <td><input type="button" name="button" class="button" value="log" onclick="{ log(this.form) }"style="font-size: 18px; -webkit-appearance: none;" ></td>
-                <td><input type="button" name="button" class="button" value="exp"onclick="display('exp()')"style="font-size: 18px; -webkit-appearance: none;"></td>
-                <td><input type="button" name="button" class="button" value="x³" onclick="display('x³')"style="font-size: 18px; -webkit-appearance: none;" ></td>
+                <td><input type="button" name="button" class="button" value="("onclick="display('(')" style="font-size: 18px; -webkit-appearance: none;"></td>
+                <td><input type="button" name="button" class="button" value=")" onclick="display(')')"style="font-size: 18px; -webkit-appearance: none;" ></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="7" onclick="display('7')"></td>
@@ -270,14 +296,18 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="9" onclick="display('9')"></td>
                 <td><input type="button" name="button" class="button" value="×" onclick="display('×')"></td>
                 <td><input type="button" name="button" class="button" value="³√" onclick="display('³√')"></td>
-                <td colspan="2" rowspan="2"><input type="button" name="button" class="button" value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00;"></td>
+                <td colspan="2" rowspan="2"><input type="button" name="button" class="button" value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00; @media screen and (max-width: 370px){
+                    height: 50;
+                    width: 50;
+                    
+                }"></td>
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="0" onclick="display('0')"></td>
                 <td><input type="button" name="button" class="button" value="." onclick="display('.')"></td>
                 <td><input type="button" name="button" class="button" value="π" onclick="display('3.141592')"></td>
                 <td><input type="button" name="button" class="button" value="÷" onclick="display('÷')"></td>
-                <td><input type="button" name="button" class="button" value="()"onclick="display('()')"></td>
+                <td><input type="button" name="button" class="button" value="exp" onclick="display('exp()')"></td>
             </tr>
             
             
