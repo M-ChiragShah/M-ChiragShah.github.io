@@ -182,7 +182,7 @@ body {
     box-sizing: border-box;
     box-shadow: 0px 20px 20px black;
     border-radius: 10px;
-    
+    height: 360px;
 }
 
 
@@ -228,6 +228,34 @@ p.heading:hover {
     color: rgb(120, 221, 174);
 }
 
+.button2{
+    width: 50;
+    height: 50;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    background: #332c2c00;
+    font-weight: 500;
+    border: 0.1px;
+    outline: none;
+    color: lightskyblue;
+    box-shadow: 4px 5px 7px 0px black;
+    display: block;
+    border-radius: 0 0 10px 0;
+    
+
+}
+
+
+
+.button2:active {
+    box-shadow: 0px 0px 7px 0px black inset;
+    transition: 0.2s;
+    background: rgba(27, 27, 27, 0);
+    color: rgb(120, 221, 174);
+}
+}
+
 
 
 
@@ -270,16 +298,27 @@ p.heading:hover {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: black;
+        background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #040c1f 74%);
+    
     }
     .calc {
-        background: rgb(38, 37, 37);
-        box-shadow:0px 20px 20px rgba(47, 47, 47, 0.582);
+        box-shadow:0px 20px 20px rgba(47, 47, 47, 0);
+        height: 360px;
+        background-color: #7f5a83;
+        background-image:linear-gradient(315deg, #0f0e0f 0%, #042034 74%) ;
+
+
+        
+        
+
 
     }
 
     .button {
-        color: gray;
+        color: #618eae;
+        border-radius:0% 30% ;
+        box-shadow: 3px 3px 6px black;
     }
 
     .display {
@@ -295,6 +334,25 @@ p.heading:hover {
     .button:hover {
         color: #983c00;
 
+    }
+
+    .display:hover {
+        background-color: black;
+    }
+    .display::placeholder{
+        color: transparent;
+       
+    }
+
+    .display:hover::placeholder {
+        
+        color: rgb(37, 36, 36);
+        transition: 2s ;
+        font-family: Poppins;
+    }
+
+    .button2 {
+        
     }
 }
 
@@ -316,7 +374,7 @@ p.heading:hover {
         <p class="heading">Calculator</p>
         <table style="margin-left: 3;">
             <tr>
-                <input type="text" name="text" class="display" placeholder="%*+-" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
+                <input type="text" name="text" class="display" placeholder="DarkMode" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
             </tr>
             <br>
             <tr>
@@ -332,7 +390,7 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="1" onclick="display('1')"></td>
                 <td><input type="button" name="button" class="button" value="2" onclick="display('2')"></td>
                 <td><input type="button" name="button" class="button" value="3" onclick="display('3')"></td>
-                <td><input type="button" name="button" class="button" value="+" onclick="display('+')"></td>
+                <td><input type="button" name="button" class="button" value="+" onclick="display('+')" ></td>
                 <td><input type="button" name="button" class="button" value="sin⁻¹ " onclick="display('sin⁻¹')" style="font-size: 18px; -webkit-appearance: none;"></td>
                 <td><input type="button" name="button" class="button" value="cos⁻¹" onclick="display('cos⁻¹')" style="font-size: 18px;  -webkit-appearance: none;"></td>
                 <td><input type="button" name="button" class="button" value="tan⁻¹" onclick="display('tan⁻¹')" style="font-size: 18px;  -webkit-appearance: none;"></td>
@@ -341,7 +399,7 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="4" onclick="display('4')"></td>
                 <td><input type="button" name="button" class="button" value="5" onclick="display('5')"></td>
                 <td><input type="button" name="button" class="button" value="6" onclick="display('6')"></td>
-                <td><input type="button" name="button" class="button" value="-" onclick="display('-')"></td>
+                <td><input type="button" name="button" class="button" value="-" onclick="display('-')" ></td>
                 <td><input type="button" name="button" class="button" value="log" onclick="{ log(this.form) }"style="font-size: 18px; -webkit-appearance: none;" ></td>
                 <td><input type="button" name="button" class="button" value="("onclick="display('(')" style="font-size: 18px; -webkit-appearance: none;"></td>
                 <td><input type="button" name="button" class="button" value=")" onclick="display(')')"style="font-size: 18px; -webkit-appearance: none;" ></td>
@@ -350,15 +408,15 @@ p.heading:hover {
                 <td><input type="button" name="button" class="button" value="7" onclick="display('7')"></td>
                 <td><input type="button" name="button" class="button" value="8" onclick="display('8')"></td>
                 <td><input type="button" name="button" class="button" value="9" onclick="display('9')"></td>
-                <td><input type="button" name="button" class="button" value="×" onclick="display('×')"></td>
+                <td><input type="button" name="button" class="button" value="×" onclick="display('×')" ></td>
                 <td><input type="button" name="button" class="button" value="³√" onclick="display('³√')"></td>
-                <td colspan="2" rowspan="2"><input type="button" name="button" class="button"  value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00; color: #983c00; "></td>
+                <td colspan="2" rowspan="2"><input type="button" name="button" class="button2"  value="=" onclick="solve()" style="height: 106; width: 106; font-size: 42;  background-color: #332c2c00; color: #983c00; "></td>
             </tr>
             <tr>
-                <td><input type="button" name="button" class="button" value="0" onclick="display('0')"></td>
+                <td><input type="button" name="button" class="button" value="0" onclick="display('0')" style="border-radius: 0px 0px 0px 10px;"></td>
                 <td><input type="button" name="button" class="button" value="." onclick="display('.')"></td>
                 <td><input type="button" name="button" class="button" value="π" onclick="display('3.141592')"></td>
-                <td><input type="button" name="button" class="button" value="÷" onclick="display('÷')"></td>
+                <td><input type="button" name="button" class="button" value="÷" onclick="display('÷')" ></td>
                 <td><input type="button" name="button" class="button" value="exp" onclick="display('exp()')"></td>
             </tr>
             
