@@ -98,14 +98,16 @@
 
             function tan(form)
             {
-                form.calc_1.value = Math.tan(((form.calc_1.value)*Math.PI/180));
+                form.calc_1.value = Math.sin((form.calc_1.value)*Math.PI/180)/(Math.cos((form.calc_1.value)*Math.PI/180));
+                
+                
             
             }
 
             function log(form)
             {
                 form.calc_1.value = Math.log10((form.calc_1.value));
-            
+          
             }
 
 
@@ -254,7 +256,7 @@ p.heading:hover {
     background: rgba(27, 27, 27, 0);
     color: rgb(120, 221, 174);
 }
-}
+
 
 
 
@@ -294,6 +296,28 @@ p.heading:hover {
     transition: 2s;
     color: gray;
 }*/
+
+a {
+    text-decoration: none;
+    color: #b63d19;
+}
+p.des {
+    text-align: center;
+    transform: translate(30px, 399px);
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    position: absolute;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition: 1s;
+}
+
+a:active {
+    color: blue;
+}
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -351,9 +375,18 @@ p.heading:hover {
         font-family: Poppins;
     }
 
-    .button2 {
-        
+    a {
+    text-decoration: none;
+    color: #74a5e1;
     }
+    p.des {
+    text-align: center;
+    transform: translate(30px, 399px);
+    font-family: sans-serif;
+    color: gray;
+    position: absolute;
+    }
+
 }
 
    
@@ -369,9 +402,13 @@ p.heading:hover {
     <link rel="stylesheet" href="" type="text/css">
     <body>
     <form>
-        <div id="overlay"></div>
+        
     <div class="calc">
         <p class="heading">Calculator</p>
+        <div class="creators"></div>
+          <p class="des">Designed By <a href="https://github.com/ChiragLikesCoding">Chirag Shah </a>&<a href="https://github.com/DarthMuzammil">  Muzammil Inamdar</a></p>
+
+        
         <table style="margin-left: 3;">
             <tr>
                 <input type="text" name="text" class="display" placeholder="DarkMode" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
