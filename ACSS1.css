@@ -207,7 +207,7 @@ a:active {
 
 
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     body {
         background-color: #000000;
         background-image: linear-gradient(315deg, #000000 0%, #040c1f 74%);
@@ -260,21 +260,12 @@ a:active {
         color: rgb(37, 36, 36);
         transition: 2s ;
         font-family: Poppins;
-    }
+    }*/
 
-    a {
-    text-decoration: none;
-    color: #74a5e1;
-    }
-    p.des {
-    text-align: center;
-    transform: translate(30px, 399px);
-    font-family: sans-serif;
-    color: gray;
-    position: absolute;
-    }
+    
+    
 
-}
+
 
 input[type="checkbox"] {
     position: absolute;
@@ -329,5 +320,14 @@ p.theme {
     color: rgb(179, 78, 11);
 }
   
-
-   
+a {
+    text-decoration: none;
+    color: #74a5e1;
+}
+ p.des {
+    text-align: center;
+    transform: translate(30px, 399px);
+    font-family: sans-serif;
+    color: gray;
+    position: absolute;
+}
