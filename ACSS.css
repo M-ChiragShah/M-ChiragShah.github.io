@@ -151,30 +151,7 @@ p.heading:hover {
      }
 }
 
-/* @media screen and (max-width: 370px){
-    .calc{
-        width: 90%;
-    }
-    .display{
-        width: 100%;
-    }
-    .heading{
-        font-size: 5px;
-        width: 100%;
-        top: -20%;
-        line-height: 1.1;
-    }
-    .button{
-        width: 100%;
-    }
 
-    
-}*/
-/* body:active{
-    background: linear-gradient(45deg, #131c4af7, #0f5045);
-    transition: 2s;
-    color: gray;
-}*/
 
 a {
     text-decoration: none;
@@ -247,10 +224,9 @@ input:checked[type="checkbox"]::before {
 
 p.theme {
     position: absolute;
-    top: 60%;
-    left: 22%;  
-    font-family: Poppins,sans-serif;
+    top: 103.5%;
+    left: 75%;
+    font-family: sans-serif;
     color: rgb(4, 31, 63);
-    transform: translateX(334%)translateY(660%);
 }
-   
+
