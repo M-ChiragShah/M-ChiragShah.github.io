@@ -206,62 +206,6 @@ a:active {
 }
 
 
-
-/*@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000000;
-        background-image: linear-gradient(315deg, #000000 0%, #040c1f 74%);
-    
-    }
-    .calc {
-        box-shadow:0px 20px 20px rgba(47, 47, 47, 0);
-        height: 360px;
-        background-color: #7f5a83;
-        background-image:linear-gradient(315deg, #0f0e0f 0%, #042034 74%) ;
-
-
-        
-        
-
-
-    }
-
-    .button {
-        color: #618eae;
-        border-radius:0% 30% ;
-        box-shadow: 3px 3px 6px black;
-    }
-
-    .display {
-    background: #000000ab;
-    color: #983c00;
-    border-radius: 10px 10px 0 0;
-    }
-
-    .button:active{
-        color: #983c00;
-        box-shadow: 0px 0px 7px 0px black inset;
-    }
-    .button:hover {
-        color: #983c00;
-
-    }
-
-    .display:hover {
-        background-color: black;
-    }
-    .display::placeholder{
-        color: transparent;
-       
-    }
-
-    .display:hover::placeholder {
-        
-        color: rgb(37, 36, 36);
-        transition: 2s ;
-        font-family: Poppins;
-    }*/
-
     
     
 
@@ -313,21 +257,10 @@ input:checked[type="checkbox"]::before {
 
 p.theme {
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translateX(159%)translateY(820%);
     font-family: Poppins,sans-serif;
     color: rgb(179, 78, 11);
+    top: 60%;
+    left: 22%;
+    transform: translateX(334%)translateY(667%);
 }
   
-a {
-    text-decoration: none;
-    color: #74a5e1;
-}
- p.des {
-    text-align: center;
-    transform: translate(30px, 399px);
-    font-family: sans-serif;
-    color: gray;
-    position: absolute;
-}
