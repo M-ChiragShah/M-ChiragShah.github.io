@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+body {
+    
+    /*animation: linear 10s body infinite;*/
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #040c1f 74%);
+}
+
+
+
+.button {
+    width: 50;
+    height: 50;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    background: #332c2c00;
+    font-weight: 500;
+    border: 0.1px;
+    outline: none;
+    color: #618eae;
+    border-radius:0% 30% ;
+    box-shadow: 3px 3px 6px black; 
+    display: block;
+    
+
+}
+.display {
+    
+    height: 80;
+    font-size: 25px;
+    border: 1.0px solid #35343400;
+    text-align: right;
+    outline: none;
+    width: 390;
+    font-family: Poppins,sans-serif;
+    background: #000000ab;
+    color: #983c00;
+    border-radius: 10px 10px 0 0;
+
+
+}
+
+.display::placeholder {
+    color: transparent;
+}
+.display:hover {
+    transition: 0.5s;
+   
+    background: rgb(0, 0, 0);
+}
+
+.display:hover::placeholder {
+    
+    color: rgb(37, 36, 36);
+    transition: 0.5s;
+
+}
+.calc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);   
+    width: 390;
+    box-sizing: border-box;   
+    border-radius: 10px;
+    height: 360px;
+    box-shadow:0px 20px 20px rgba(47, 47, 47, 0);
+    height: 360px;
+    background-color: #7f5a83;
+    background-image:linear-gradient(315deg, #0f0e0f 0%, #042034 74%) ;
+
+}
+
+
+
+p.heading {
+    
+    position: absolute;
+    text-align: center;
+    transform: translateY(-80px)translateX(52.5px);
+    font-size: 30px;
+    font-family:Poppins,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    letter-spacing: 10px;
+    background: -webkit-linear-gradient(60deg, #983c00, #390f94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+p.heading:hover {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    background: -webkit-linear-gradient(120deg, #1caf95e3, #4764e9c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: 3s;
+}
+
+.button:hover {
+    transition: 0.1s;
+    color: #983c00;
+
+
+}
+
+.button:active{
+    color: #983c00;
+    box-shadow: 0px 0px 7px 0px black inset;
+    transition: 0.2s;
+    background: rgba(27, 27, 27, 0);
+    
+}
+
+.button2{
+    width: 50;
+    height: 50;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    background: #332c2c00;
+    font-weight: 500;
+    border: 0.1px;
+    outline: none;
+    color: lightskyblue;
+    box-shadow: 4px 5px 7px 0px black;
+    display: block;
+    border-radius: 0 0 10px 0;
+    
+
+}
+
+
+
+.button2:active {
+    box-shadow: 0px 0px 7px 0px black inset;
+    transition: 0.2s;
+    background: rgba(27, 27, 27, 0);
+    color: rgb(120, 221, 174);
+}
+
+
+
+
+
+@viewport {
+    width: device-width ;
+}
+
+@media only screen and (max-width: 480px){
+    
+    .calc{
+         width: 390px;
+     }
+}
+
+/* @media screen and (max-width: 370px){
+    .calc{
+        width: 90%;
+    }
+    .display{
+        width: 100%;
+    }
+    .heading{
+        font-size: 5px;
+        width: 100%;
+        top: -20%;
+        line-height: 1.1;
+    }
+    .button{
+        width: 100%;
+    }
+
+    
+}*/
+/* body:active{
+    background: linear-gradient(45deg, #131c4af7, #0f5045);
+    transition: 2s;
+    color: gray;
+}*/
+
+a {
+    text-decoration: none;
+    color: #74a5e1;
+}
+p.des {
+    text-align: center;
+    transform: translate(30px, 450px);
+    font-family: sans-serif;
+    color: gray;
+    position: absolute;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition: 1s;
+}
+
+a:active {
+    color: blue;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #040c1f 74%);
+    
+    }
+    .calc {
+        box-shadow:0px 20px 20px rgba(47, 47, 47, 0);
+        height: 360px;
+        background-color: #7f5a83;
+        background-image:linear-gradient(315deg, #0f0e0f 0%, #042034 74%) ;
+
+
+        
+        
+
+
+    }
+
+    .button {
+        color: #618eae;
+        border-radius:0% 30% ;
+        box-shadow: 3px 3px 6px black;
+    }
+
+    .display {
+    background: #000000ab;
+    color: #983c00;
+    border-radius: 10px 10px 0 0;
+    }
+
+    .button:active{
+        color: #983c00;
+        box-shadow: 0px 0px 7px 0px black inset;
+    }
+    .button:hover {
+        color: #983c00;
+
+    }
+
+    .display:hover {
+        background-color: black;
+    }
+    .display::placeholder{
+        color: transparent;
+       
+    }
+
+    .display:hover::placeholder {
+        
+        color: rgb(37, 36, 36);
+        transition: 2s ;
+        font-family: Poppins;
+    }
+
+    a {
+    text-decoration: none;
+    color: #74a5e1;
+    }
+    p.des {
+    text-align: center;
+    transform: translate(30px, 399px);
+    font-family: sans-serif;
+    color: gray;
+    position: absolute;
+    }
+
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    width: 35px;
+    height: 15px;
+    transform: translateX(334%)translateY(660%);
+    -webkit-appearance: none;
+    outline: none;
+    background: rgb(49, 47, 47);
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 0px gray;
+    transition: 0.3s ease;
+    display: flex;
+}
+
+input:checked[type="checkbox"] {
+    background: rgb(49, 47, 47);
+}
+input[type="checkbox"]::before {
+    content: '';
+    font-size: 20px;
+    font-family:unset;
+    text-align: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: rgb(87, 218, 241);
+    top:0;
+    left: 0;
+    position: absolute;
+    transition: ease 0.2s;
+    display: flex;
+    justify-content: center;
+}
+
+input:checked[type="checkbox"]::before {
+    left: 21px;
+    content: '';
+    transition: 0.2s ease;
+    text-align: center;
+    background: rgb(158, 78, 12);
+}
+
+p.theme {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translateX(159%)translateY(820%);
+    font-family: Poppins,sans-serif;
+    color: rgb(179, 78, 11);
+}
+  
+
+   
