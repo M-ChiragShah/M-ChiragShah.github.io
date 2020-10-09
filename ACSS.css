@@ -156,6 +156,11 @@ p.heading {
     .calc{
          width: 390px;
      }
+
+    body {
+        animation: gradientBG 2s ease infinite;
+
+    }
 }
 
 
