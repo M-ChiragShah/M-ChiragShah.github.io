@@ -6,6 +6,7 @@ body {
     /*animation: linear 10s body infinite;*/
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #040c1f 74%);
+    
 }
 
 
@@ -87,20 +88,20 @@ p.heading {
     text-transform: uppercase;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
     letter-spacing: 10px;
-    background: -webkit-linear-gradient(60deg, #983c00, #390f94);
+    background: -webkit-linear-gradient(120deg, #1caf95e3, #4764e9c2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
 
-p.heading:hover {
+/*p.heading:hover {
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
     background: -webkit-linear-gradient(120deg, #1caf95e3, #4764e9c2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     transition: 3s;
-}
+}*/
 
 .button:hover {
     transition: 0.1s;
@@ -191,8 +192,8 @@ a:active {
 input[type="checkbox"] {
     position: absolute;
     top: 80%;
-    left: 60%;
-    width: 35px;
+    left: 65%;
+    width: 28px;
     height: 15px;
     transform: translateX(334%)translateY(660%);
     -webkit-appearance: none;
@@ -225,20 +226,42 @@ input[type="checkbox"]::before {
 }
 
 input:checked[type="checkbox"]::before {
-    left: 21px;
+    left: 14px;
     content: '';
     transition: 0.2s ease;
     text-align: center;
-    background: rgb(158, 78, 12);
+    background: rgb(29, 145, 112);
 }
 
 p.theme {
     position: absolute;
     font-family: sans-serif;
-    color: rgb(179, 78, 11);
+    color: rgb(88, 131, 150);
     top: 103.5%;
     left: 75%;
     
 }
 
 
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

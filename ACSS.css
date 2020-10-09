@@ -2,8 +2,15 @@
 
 
 body {
-    background:linear-gradient(45deg, #4764e9c2, #1caf95e3);
+    
+    /*background:linear-gradient(45deg, #4764e9c2, #1caf95e3);*/
     /*animation: linear 10s body infinite;*/
+    background: linear-gradient(-45deg, #dac1ba, #d185a2, #23a6d5, #7dc0b0, rgb(236, 102, 102));
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 7s ease infinite;
+	 animation: gradientBG 7s ease infinite;
+
+
 }
 
 
@@ -29,7 +36,7 @@ body {
     height: 80;
     font-size: 25px;
     border: 1.0px solid #35343400;
-    background: #00000085;
+    background: #000000c7;
     text-align: right;
     outline: none;
     width: 390;
@@ -44,12 +51,12 @@ body {
 }
 .display:hover {
     color: gray;
-    background: rgba(14, 13, 13, 0.267);
+    background: rgba(14, 13, 13, 0.774);
     transition: 0.5s;
 }
 
 .display:hover::placeholder {
-    color: transparent;
+    color: rgb(39, 39, 39);
     transition: 0.5s;
 
 }
@@ -85,14 +92,14 @@ p.heading {
 
 }
 
-p.heading:hover {
+/*p.heading:hover {
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
     background: -webkit-linear-gradient(120deg, #1caf95e3, #4764e9c2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     transition: 3s;
-}
+}*/
 
 .button:hover {
     transition: 0.1s;
@@ -181,8 +188,8 @@ a:active {
 input[type="checkbox"] {
     position: absolute;
     top: 80%;
-    left: 60%;
-    width: 35px;
+    left: 65%;
+    width: 28px;
     height: 15px;
     transform: translateX(334%)translateY(660%);
     -webkit-appearance: none;
@@ -215,7 +222,7 @@ input[type="checkbox"]::before {
 }
 
 input:checked[type="checkbox"]::before {
-    left: 21px;
+    left: 14px;
     content: '';
     transition: 0.2s ease;
     text-align: center;
@@ -230,3 +237,25 @@ p.theme {
     color: rgb(4, 31, 63);
 }
 
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

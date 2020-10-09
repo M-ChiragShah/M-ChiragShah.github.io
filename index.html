@@ -139,12 +139,17 @@
         <script>
             let link=document.getElementById("link")
             let check=document.getElementById("check")
+
             function toggle(checkbox){
+                let b=document.getElementById("calc_1")
+
                 if (check.checked) {
-                    link.href="ACSS1.css"    
+                    link.href="ACSS1.css" 
+                    b.placeholder="DarkMode"  
                 }
                 else{
                     link.href="ACSS.css"
+                    b.placeholder="LightMode"
                 }
             }
         </script>
@@ -154,7 +159,7 @@
         
         <table style="margin-left: 3;">
             <tr>
-               <input type="text" name="text" class="display" placeholder="DarkMode" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
+               <input type="text" name="text" class="display" placeholder="" id = "calc_1" onkeypress='return restrictAlphabets(event)'>
             </tr>
             <br>
             <tr>
