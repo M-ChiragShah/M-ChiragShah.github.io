@@ -158,7 +158,7 @@ p.heading {
      }
 
     body {
-        animation: gradientBG 2s ease infinite;
+        animation: gradientBG 5s ease infinite;
 
     }
 }
