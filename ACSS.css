@@ -5,8 +5,8 @@ body {
 
     /*background:linear-gradient(45deg, #4764e9c2, #1caf95e3);*/
     /*animation: linear 10s body infinite;*/
-    background: linear-gradient(-45deg, #dac1ba, #d185a2, #23a6d5, #7dc0b0, rgb(236, 102, 102));
-	background-size: 400% 400%;
+    background: linear-gradient(-60deg, #dac1ba, #d185a2, #23a6d5, #7dc0b0, rgb(236, 102, 102)), rgb(69, 233, 225);
+	background-size: 600% 600%;
 	-webkit-animation: gradientBG 7s ease infinite;
 	 animation: gradientBG 7s ease infinite;
 
@@ -28,6 +28,7 @@ body {
     color: lightskyblue;
     box-shadow: 4px 5px 7px 0px black;
     display: block;
+    animation: butt 1.2s ease-in linear infinite;
     
 
 }
@@ -163,27 +164,37 @@ p.heading {
     }
 }
 
+.icon {
+    position: absolute;
+    left: 27%;
+    top: 120%;
+}
+
 
 
 a {
     text-decoration: none;
-    color: #0d1b95;
+    color: #000000;
+    padding: 5px;
 }
 p.des {
     text-align: center;
-    transform: translate(30px, 450px);
+    transform: translate(65%,2190%);
     font-family: sans-serif;
     color: rgb(0, 0, 0);
     position: absolute;
+    
 }
 
 a:hover{
-    text-decoration: underline;
-    transition: 1s;
+    transition: 0.2s;
+    color: rgb(21, 136, 230);
+    border-radius: 50%;
+    border: 1.3px solid black;
 }
 
 a:active {
-    color: blue;
+    color: rgb(43, 179, 241);
 }
 
 
@@ -264,3 +275,18 @@ p.theme {
 		background-position: 0% 50%;
 	}
 }
+
+@keyframes butt {
+    0% {
+        color: chartreuse;
+    }
+    50% {
+        color: coral;
+    }
+    100% {
+        color: cornflowerblue;
+    }
+
+}
+
+
