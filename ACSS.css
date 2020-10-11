@@ -44,7 +44,7 @@ body {
     width: 390;
     color: gray;
     font-family: Poppins,sans-serif;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0 ;
 
 }
 
