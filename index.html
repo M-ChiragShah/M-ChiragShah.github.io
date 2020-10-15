@@ -134,26 +134,25 @@
     <form>
         
     <div class="calc">
-        <audio controls autoplay loop id="music"> <source src="videoplayback_Trim.mp3" type="audio/mp3"></audio>
-        <p class="Music">Music:</p><input type="checkbox" id="check1" onclick="musicplayer(this)" checked>
+        <audio controls id="song" loop><source src="videoplayback_Trim.mp3" type="audio/mp3"></audio>
+        <p class="Music">Music:</p><input type="checkbox" id="check1" onclick="musicplayer(this)" >
         <script>
-            let music=document.getElementById("music")
+            let music=document.getElementById("song")
             let check1=document.getElementById("check1")
             function musicplayer(checkbox){
                 if (check1.checked) {
                     music.play()
-                    if (check.checked) {
-                        music.src="Sanctuary.mp3"    
-                    }
-                    else {
-                        music.src="videoplayback_Trim.mp3"
-                    }
+                    
+                        
+                     
                 }
                 else {
                     music.pause()
-                    
-                        
                 }
+
+                
+
+                
             }
             
         </script>
@@ -168,34 +167,24 @@
 
             function toggle(checkbox){
                 let b=document.getElementById("calc_1")
-                let music=document.getElementById("music")
+                let music=document.getElementById("song")
                 let check1=document.getElementById("check1")
+
 
                 if (check.checked) {
                     link.href="ACSS1.css"
-                    if (check1.checked) {
-                        music.play()
-                        music.src="Sanctuary.mp3"
-                        
-                    }
-
-                    else{
-                        music.pause()
-                    }
+                    check1.checked=false
+                    music.src="Sanctuary.mp3"
+                    
                 }
                 else {
                     link.href="ACSS.css"
-                    if (check1.checked) {
-                        music.play()
-                        music.src="videoplayback_Trim.mp3"
-                        
-                    }
-                } 
+                    music.src="videoplayback_Trim.mp3"
+                    check1.checked=false
                     
+                }
+
             }
-
-
-
 
             
                     
