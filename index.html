@@ -134,6 +134,29 @@
     <form>
         
     <div class="calc">
+        <audio controls autoplay loop id="music"> <source src="videoplayback_Trim.mp3" type="audio/mp3"></audio>
+        <p class="Music">Music:</p><input type="checkbox" id="check1" onclick="musicplayer(this)" checked>
+        <script>
+            let music=document.getElementById("music")
+            let check1=document.getElementById("check1")
+            function musicplayer(checkbox){
+                if (check1.checked) {
+                    music.play()
+                    if (check.checked) {
+                        music.src="Sanctuary.mp3"    
+                    }
+                    else {
+                        music.src="videoplayback_Trim.mp3"
+                    }
+                }
+                else {
+                    music.pause()
+                    
+                        
+                }
+            }
+            
+        </script>
         <p class="heading">Calculator</p>
         
         <p class="theme">Theme:</p>
@@ -145,16 +168,44 @@
 
             function toggle(checkbox){
                 let b=document.getElementById("calc_1")
+                let music=document.getElementById("music")
+                let check1=document.getElementById("check1")
 
                 if (check.checked) {
-                    link.href="ACSS1.css" 
-                    b.placeholder="DarkMode"  
+                    link.href="ACSS1.css"
+                    if (check1.checked) {
+                        music.play()
+                        music.src="Sanctuary.mp3"
+                        
+                    }
+
+                    else{
+                        music.pause()
+                    }
                 }
-                else{
+                else {
                     link.href="ACSS.css"
-                    b.placeholder="LightMode"
-                }
+                    if (check1.checked) {
+                        music.play()
+                        music.src="videoplayback_Trim.mp3"
+                        
+                    }
+                } 
+                    
             }
+
+
+
+
+            
+                    
+                
+                    
+                
+
+                    
+                
+            
         </script>
         <div class="creators"></div>
           <p class="des">Designers & Developers</p>
