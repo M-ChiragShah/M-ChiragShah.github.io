@@ -47,10 +47,17 @@ body {
     border-radius: 10px 10px 0 0 ;
 
 }
-
 .display::placeholder {
-    color: transparent;
+    color: rgb(34, 34, 34);
+    /*animation: place 2s steps(40,end);*/
+    
 }
+@keyframes place{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+
 .display:hover {
     color: gray;
     background: rgba(14, 13, 13, 0.774);
@@ -91,7 +98,15 @@ p.heading {
     background: -webkit-linear-gradient(60deg, #983c00, #390f94);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: head 2.0s steps(40,end) ;
 
+}
+
+@keyframes head {
+    from { width: 0;
+          }
+    to {width: 70%;
+       }
 }
 
 /*p.heading:hover {
