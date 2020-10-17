@@ -80,8 +80,13 @@ body {
     height: 360px;
     background-color: #7f5a83;
     background-image:linear-gradient(315deg, #0f0e0f 0%, #042034 74%) ;
-
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
 }
+
+
 
 
 
@@ -199,10 +204,13 @@ p.des {
     position: absolute;
 }
 a:hover{
-    transition: 0.2s;
+    transition: 1s;
     color: rgb(21, 136, 230);
     border: 1.3px solid rgb(21, 136,230);
     border-radius: 50%;
+    transform: rotate(360deg);
+    font-size: 25px;
+
 }
 
 a:active {
@@ -228,6 +236,7 @@ input[type="checkbox"] {
     box-shadow: inset 0px 0px 0px gray;
     transition: 0.3s ease;
     display: flex;
+    cursor: pointer;
 }
 
 input:checked[type="checkbox"] {
@@ -318,6 +327,7 @@ input[type="checkbox"]#check1{
     box-shadow: inset 0px 0px 0px gray;
     transition: 0.3s ease;
     display: flex;
+    cursor: pointer;
 }
 
 input:checked[type="checkbox"]#check1 {

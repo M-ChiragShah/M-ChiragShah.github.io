@@ -80,7 +80,13 @@ body {
     box-shadow: 0px 20px 20px black;
     border-radius: 10px;
     height: 360px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
 }
+
+
 
 
 
@@ -200,18 +206,26 @@ p.des {
     color: rgb(0, 0, 0);
     position: absolute;
     
+    
 }
 
-a:hover{
-    transition: 0.2s;
-    color: rgb(21, 136, 230);
+a:hover {
+    transition: 1s;
+    color: rgb(0, 0, 0);
     border-radius: 50%;
     border: 1.3px solid black;
+    transform: rotate(360deg);
+    font-size: 25px;
 }
 
 a:active {
     color: rgb(43, 179, 241);
+    border-radius: 50%;
+    border: 1.3px solid black;
+    transform: rotate(360deg);
+    font-size: 25px;
 }
+
 
 
 
@@ -231,6 +245,7 @@ input[type="checkbox"] {
     box-shadow: inset 0px 0px 0px gray;
     transition: 0.3s ease;
     display: flex;
+    cursor: pointer;
 }
 
 input:checked[type="checkbox"] {
@@ -335,6 +350,7 @@ input[type="checkbox"]#check1{
     box-shadow: inset 0px 0px 0px gray;
     transition: 0.3s ease;
     display: flex;
+    cursor: pointer;
 }
 
 input:checked[type="checkbox"]#check1 {
