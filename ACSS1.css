@@ -25,6 +25,8 @@ body {
     border-radius:0% 30% ;
     box-shadow: 3px 3px 6px black; 
     display: block;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
     
 
 }
@@ -127,6 +129,8 @@ p.heading {
 .button:hover {
     transition: 0.1s;
     color: #983c00;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 
 
 }
@@ -136,7 +140,8 @@ p.heading {
     box-shadow: 0px 0px 7px 0px black inset;
     transition: 0.2s;
     background: rgba(27, 27, 27, 0);
-    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .button2{
@@ -153,7 +158,8 @@ p.heading {
     box-shadow: 4px 5px 7px 0px black;
     display: block;
     border-radius: 0 0 10px 0;
-    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 
 }
 
@@ -164,6 +170,8 @@ p.heading {
     transition: 0.2s;
     background: rgba(27, 27, 27, 0);
     color: rgb(120, 221, 174);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -237,6 +245,8 @@ input[type="checkbox"] {
     transition: 0.3s ease;
     display: flex;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 input:checked[type="checkbox"] {
@@ -328,6 +338,8 @@ input[type="checkbox"]#check1{
     transition: 0.3s ease;
     display: flex;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 input:checked[type="checkbox"]#check1 {
