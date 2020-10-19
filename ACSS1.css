@@ -144,6 +144,8 @@ p.heading {
     background: rgba(27, 27, 27, 0);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
+    font-size: 15px;
+
 }
 
 .button2{
