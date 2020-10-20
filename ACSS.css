@@ -185,6 +185,7 @@ p.heading {
 
 @viewport {
     width: device-width ;
+	height: device-height;
 }
 
 @media only screen and (max-width: 480px){
@@ -202,7 +203,7 @@ p.heading {
 .icon {
     position: absolute;
     left: 27%;
-    top: 120%;
+    top: height - 10*(height/width);
 }
 
 
@@ -214,10 +215,10 @@ a {
 }
 p.des {
     text-align: center;
-    transform: translate(65%,2190%);
     font-family: sans-serif;
     color: rgb(0, 0, 0);
     position: absolute;
+	top: height - 30*(height/width)
 }
 
 a:hover {
