@@ -203,7 +203,7 @@ p.heading {
 .icon {
     position: absolute;
     left: 27%;
-    top: height - 10*(height/width);
+    top: 120%;
 }
 
 
@@ -218,7 +218,7 @@ p.des {
     font-family: sans-serif;
     color: rgb(0, 0, 0);
     position: absolute;
-	top: height - 30*(height/width)
+    top: 130%;
 }
 
 a:hover {
