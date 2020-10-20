@@ -98,7 +98,7 @@ p.heading {
     
     position: absolute;
     text-align: center;
-    transform: translateY(-80px)translateX(52.5px);
+    transform: translateY(-80px)translateX(48.5px);
     font-size: 30px;
     font-family:Poppins,sans-serif;
     font-weight: 600;
@@ -210,7 +210,8 @@ a {
 }
 p.des {
     text-align: center;
-    transform: translate(65%,2190%);
+    top: 113%;
+    left: 30%;
     font-family: sans-serif;
     color: rgb(89 133 165);
     position: absolute;
@@ -251,6 +252,7 @@ input[type="checkbox"] {
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
+    -moz-appearance: none;
 }
 
 input:checked[type="checkbox"] {
@@ -344,6 +346,7 @@ input[type="checkbox"]#check1{
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
+    -moz-appearance: none;
 }
 
 input:checked[type="checkbox"]#check1 {

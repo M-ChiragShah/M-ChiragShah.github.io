@@ -214,8 +214,7 @@ a {
 }
 p.des {
     text-align: center;
-    top: 113%;
-    left: 30%;
+    transform: translate(65%,2190%);
     font-family: sans-serif;
     color: rgb(0, 0, 0);
     position: absolute;
@@ -371,7 +370,6 @@ input[type="checkbox"]#check1{
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
-    -moz-appearance: none;
 }
 
 input:checked[type="checkbox"]#check1 {
