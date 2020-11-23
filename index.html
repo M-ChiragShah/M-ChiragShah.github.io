@@ -35,20 +35,23 @@
                     return false;
             }
             /*calculator display*/
-            var text = 
-'{ "sin":0 , "cos":0, "tan" : 0 }'
-           var obj = JSON.parse(lobal)
+            var text = '{ "sin":0 , "cos":0, "tan" : 0 }'
+           var obj = JSON.parse(global)
            let global;
             function display(x)
             {
                 if(x === 'C'){
-                    document.getElementById("calc_1").value= " "
+                    document.getElementById("calc_1").value=""
                 }
                 else if( x === '<<'){
                     val =  document.getElementById("calc_1").value
                     val_length = val.length
                     document.getElementById("calc_1").value = val.substring(0,val_length - 1)
                 }
+
+
+
+
                 else{
                     document.getElementById("calc_1").value+=x
                 }
@@ -58,6 +61,10 @@
             function solve()
             {
                 let parse = document.getElementById("calc_1").value
+                
+
+
+
                 if(parse == '9606892786'){
                     window.open('https://www.instagram.com/mohammedmuzammil_/')
                 }
@@ -70,7 +77,7 @@
                 }
                 else if(parse[1] == '√'){
                     let parse_1 = parse.substring(2,parse.length)
-                    document.getElementById("calc_1").value = Math.sqrt(parse_1)
+                    document.getElementById("calc_1").value = Math.sqrt(parse_1)*parse
                 }
                 else{  
                     var i = 0
@@ -114,8 +121,20 @@
             {
                 form.calc_1.value = Math.log10((form.calc_1.value));
           
+
+
             }
 
+            
+
+
+
+            
+            
+            
+                
+
+            
 
 
 
@@ -192,6 +211,7 @@
             }
 
             
+
                     
                 
                     
@@ -256,7 +276,7 @@
             </tr>
             <tr>
                 <td><input type="button" name="button" class="button" value="0" onclick="display('0')" style="border-radius: 0px 0px 0px 10px;"></td>
-                <td><input type="button" name="button" class="button" value="." onclick="display('.')"></td>
+                <td><input type="button" name="button" class="button" value="." id="dot" onclick="display('.')"></td>
                 <td><input type="button" name="button" class="button" value="π" onclick="display('3.141592')"></td>
                 <td><input type="button" name="button" class="button" value="÷" onclick="display('÷')" ></td>
                 <td><input type="button" name="button" class="button" value="exp" onclick="display('exp()')" style="-webkit-appearance: none; -moz-appearance: none;"></td>
