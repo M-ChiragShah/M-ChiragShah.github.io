@@ -285,10 +285,11 @@ input:checked[type="checkbox"]::before {
 
 p.theme {
     position: absolute;
-    font-family: sans-serif;
+    font-family: Poppins,sans-serif;
     color: rgb(88, 131, 150);
     top: 103.5%;
     left: 75%;
+    font-size: 14px;
     
 }
 
@@ -383,8 +384,9 @@ p.music {
     position: absolute;
     top: 103.5%;
     left: 13px;
-    font-family: sans-serif;
+    font-family: Poppins,sans-serif;
     color: rgb(88, 131, 150);
+    font-size: 14px;
 }
 
 @keyframes place{
